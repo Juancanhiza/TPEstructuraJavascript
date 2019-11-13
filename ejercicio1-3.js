@@ -1,11 +1,11 @@
 var fs = require('fs');
 
-//Callback functions
+//EJERCICIO 1
+
 var error = function (err, response, body) {
 	console.log('ERROR [%s]', err);
 };
 var success = function (data) {
-	//console.log('Data [%s]', data);
 	tweets = JSON.parse(data);
 	//console.log('EL archivo es: ', tweets)
 	var i;
@@ -35,7 +35,7 @@ var success = function (data) {
 
 var Twitter = require('twitter-node-client').Twitter;
 
-//Get this data from your twitter apps dashboard
+
 var cred = {
 	"consumerKey": "S0AENDlf3pPFqqtMMBGrDYB8z",
 	"consumerSecret": "t20hmQFuJ0eb6KmWcAAxaSoh3PmwjLjmii0Ttrzz3oGksSXXxv",
@@ -143,7 +143,7 @@ for (i=1;i<lista_tweets.length;i++){
 var mayor_apariciones = 0;
 var apariciones = 0;
 var anterior = lista_tweets[1].autor.toString();
-console.log(anterior);
+//console.log(anterior);
 var autor_mayor = anterior;
 var i;
 

@@ -23,8 +23,14 @@ function escapeString(string) {
 
 function sorteo(lista){
 	var ganador = Math.round(Math.random()*99);
-	console.log('El numero ganador fue: ', ganador+1);
+	console.log('El numero ganador es: ', ganador+1);
 	console.log('El usuario que ganador es: ', lista[ganador].autor);
+	var suplente = Math.round(Math.random()*99);
+	while (suplente == ganador){
+		suplente = Math.round(Math.random()*99);
+	}
+	console.log('El numero del ganador suplente es: ', suplente+1);
+	console.log('El usuario que ganador suplente es: ', lista[suplente].autor);
 }
 
 
